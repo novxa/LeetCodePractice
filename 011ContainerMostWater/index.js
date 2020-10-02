@@ -8,11 +8,11 @@ const maxArea = function(height) {
 	for(let i = 0; i < height.length; i++) {
 		for(let j = i + 1; j < height.length; j++) {
 			if(Math.min(height[i], height[j]) * (j - i) > area) {area = Math.min(height[i], height[j]) * (j - i);}
-			// console.log(` ${Math.min(height[i], height[j])} *  ${j} - ${i} = ${area}`);
 		}
 	}
 	return area;
 };
+
 // onepass
 const maxArea2 = function(height) {
 	let area = 0;
